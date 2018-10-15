@@ -2,19 +2,6 @@ package tricky_programs;
 
 import java.util.Iterator;
 
-public class StackUsingArray 
-{
-	public static void main(String args[]) 
-	{
-		ArrStack obj = new ArrStack();
-		obj.push(23);
-		obj.push(10);
-		obj.push(50);
-		
-		obj.pop();
-		System.out.println("now element at top of array is :"+obj.isEmpty());
-	}
-}
 
 class ArrStack
 {
@@ -61,8 +48,19 @@ class ArrStack
 			System.out.println(popedElement +" poped from the stack");
 			return true;
 		}
+	}	
+}
+
+public class StackUsingArray 
+{
+	public static void main(String args[]) 
+	{
+		ArrStack obj = new ArrStack();
+		obj.push(23);
+		obj.push(10);
+		obj.push(50);
+		
+		obj.pop();
+		System.out.println("now element at top of array is :"+obj.isEmpty());
 	}
-	
-	
-	
 }
