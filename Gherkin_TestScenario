@@ -1,0 +1,38 @@
+Test scenario for Services
+
+Scenario: Invalid name passed in the methord addcustomer
+    Given The user connects to 'wallet' service
+    When the user sends a addcustomer request
+    Then It throws error  'invalid argument passed to the methord'
+    And the call to methord was unsuccessful
+    
+Scenario: Invalid Mobile Number passed in the methord
+    Given The user calls to 'wallet' service
+    When the user sends a addcustomer request
+    Then It throws 'invalid argument passed to the methord'
+    And the call to methord was unsuccessful
+    
+Scenario: Invalid amount passed in the methord
+    Given The user connects to 'addCustmer' service
+    When the user sends a addcustomer request
+    Then It throws 'invalid argument passed to the methord'
+    And the call to methord was unsuccessful
+    
+Scenario: A new account gets created
+    Given The user connects to 'addCustmer' service
+    When the user sends a addcustomer request
+    Then It shows a message for 'successful account creation'
+    And the call to methord was successful
+    
+    
+Scenario: Invalid Mobile Number passed in the methord
+    Given The user connects to 'showBalance' service
+    When the user calls a showBalance request
+    Then It throws 'Invalid Moble Number' exception
+    And the call to methord was unsuccessful
+    
+Scenario: the user is shown with current balance 
+    Given The user connects to 'showBalance' service
+    When the user sends a showBalance request
+    Then It shows a message 'current balance'
+    And the call to methord was successful
